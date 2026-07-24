@@ -107,7 +107,19 @@ and restart - shipped 5.8 binaries load it automatically, so this mainly applies
 edge hosts. UE 5.4-5.7 do NOT link this module (the outfit tools are gated to 5.8+ because
 `ChaosOutfitAsset` is Experimental and does not load cleanly there), so they are unaffected.
 
-### 9. Editor crashed / PIE wedged / "Restore Packages" modal
+### 9. `Outfit commands require UE 5.8+` on a call that has nothing to do with outfits
+
+On UE 5.4 and 5.5 only. A dispatch bug mis-routes Animation state-machine authoring, blendspace
+authoring and frame-timing capture to the outfit tools' refusal string.
+
+- The tool you called is NOT version-gated - it is verified working on 5.6, 5.7 and 5.8. A fix is in
+  progress.
+- **Do NOT** rewrite the call, hunt for a different tool, or tell the human the feature is missing.
+  The error names a feature you never invoked.
+- On 5.4/5.5 those specific assets have to be authored by hand for now; everything else on the same
+  engine is unaffected.
+
+### 10. Editor crashed / PIE wedged / "Restore Packages" modal
 
 An auto-save crash-recovery modal can hold the game thread (0x0 viewport, `start_pie` hangs on
 `play_request_pending`, tools return a bare `NEEDS_RESTART`). Run

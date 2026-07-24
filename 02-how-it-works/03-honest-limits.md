@@ -6,7 +6,22 @@ section and this doc set's "What this is NOT" statements - if you spot a contrad
 three, treat it as a doc bug and check the newest one.
 
 Status key: **DEFERRED** = a real, known limit, not currently planned to close. **CAN'T FIX** = an
-engine or industry-wide architecture constraint, not fixable by this plugin at all.
+engine or industry-wide architecture constraint, not fixable by this plugin at all. **OPEN BUG** = a
+defect we are actively fixing, listed here so you are not debugging it as if it were your own.
+
+## Open bugs
+
+### UE 5.4 / 5.5 only: some commands wrongly refuse with an outfit error
+
+On UE 5.4 and 5.5, an internal dispatch bug mis-routes several commands to the outfit tools' refusal
+message. Ask your agent for Animation state-machine authoring, blendspace authoring, or frame-timing
+capture and the call comes back `Outfit commands require UE 5.8+` - an error about a feature you
+never called. Groom, flesh, geometry-collection, automation and rig commands are suspected to take
+the same wrong path; that part is not individually confirmed yet.
+
+This is a routing defect, not an engine-capability limit - the same commands are verified working on
+5.6, 5.7 and 5.8. A fix is in progress. Until it ships, read that error on 5.4/5.5 as this bug
+rather than a real version floor, and author those specific assets by hand there.
 
 ## Deferred
 
@@ -88,4 +103,4 @@ See `faq.md` "Honest limits" for the full buyer-facing list (asset import scope,
 submit, synchronous-only calls, no synthetic PIE input injection, PCG/Chaos scope, engine version
 range) - kept in one place there to avoid the ledger and the FAQ drifting apart.
 
-*Synced from repo 3ea27f0 - 2026-07-24*
+*Synced from repo 214b9b3 - 2026-07-24*
