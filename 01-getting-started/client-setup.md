@@ -54,4 +54,4 @@ safety/config profile that fits how you work.
 Confirm the server is listed once you restart the client (Claude Code: `/mcp`; other clients show
 their own MCP server list in settings).
 
-Next: **Quickstart** — verify the connection and make your first visible edit.
+Next: [Quickstart](../01-getting-started/quickstart.md) — verify the connection and make your first visible edit.

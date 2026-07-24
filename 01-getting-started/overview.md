@@ -39,7 +39,7 @@ Not five features — one loop, run on every edit:
 - **Journaled revert.** Every mutation lands in a journal with before/after state, so any step can
   be rolled back by name.
 
-See **The Verified Edit Loop** for how each stage works, and **Honest Limits** for what it openly
+See [The Verified Edit Loop](../02-how-it-works/verified-edit-loop.md) for how each stage works, and [Honest Limits](../02-how-it-works/honest-limits.md) for what it openly
 does not do.
 
 ## Who it's for
@@ -50,8 +50,8 @@ that. This is for when you want to walk away and still trust the result.
 
 ## Where to start
 
-- **Quickstart** — install, connect, and make your first verified edit.
-- **What's Included** — the domains you can build in.
-- **How It Compares** — positioning, pricing, and what it cedes to other servers.
+- [Quickstart](../01-getting-started/quickstart.md) — install, connect, and make your first verified edit.
+- [What's Included](../02-how-it-works/whats-included.md) — the domains you can build in.
+- [How It Compares](../02-how-it-works/how-it-compares.md) — positioning, pricing, and what it cedes to other servers.
 
 *Synced from repo c806b31 - 2026-07-23*

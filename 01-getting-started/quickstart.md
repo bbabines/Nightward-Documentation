@@ -11,13 +11,13 @@ local shell needs to follow the steps by hand.
 ## Step 1 — Install
 
 Epic Games Launcher, **Install to Engine** for the UE version you use (or the project-relative drop
-if you prefer). Full steps: **Install**.
+if you prefer). Full steps: [Install](../01-getting-started/install.md).
 
 ## Step 2 — Connect a client
 
 One command from your project root: `python bootstrap.py --project-path "<YourProject>.uproject"
 --client <name>`. It installs deps, registers your client, launches the editor, and prints GREEN or
-a specific RED with the fix. Full steps and per-client detail: **Client Setup**.
+a specific RED with the fix. Full steps and per-client detail: [Client Setup](../01-getting-started/client-setup.md).
 
 ## Step 3 — Verify: `doctor`, then `verify_setup`
 
@@ -45,7 +45,7 @@ gives the same live-transform readback for a running actor.
 
 ## Something not working?
 
-See **Troubleshooting** — ordered by how often each cause is the real one, from "client can't
+See [Troubleshooting](../01-getting-started/troubleshooting.md) — ordered by how often each cause is the real one, from "client can't
 connect" through the exact `doctor` failure signatures. Or ask your agent to run
 `export_support_bundle`: a redacted, local-only diagnostic zip to attach when asking for help.
 

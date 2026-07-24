@@ -14,7 +14,7 @@ redacted, local-only diagnostic zip — call log, a mutation slice, a log tail, 
 latency snapshot. Nothing is transmitted automatically; you attach it yourself. It's the fastest
 way to a real answer, since it removes the round-trip of "can you send me your setup?"
 
-Most first-run issues are covered in **Troubleshooting** before you need to ask at all.
+Most first-run issues are covered in [Troubleshooting](../01-getting-started/troubleshooting.md) before you need to ask at all.
 
 ## No SLA, on purpose
 
@@ -25,7 +25,7 @@ time. If a hard SLA is a purchase requirement, we're not the right buy today.
 ## Refunds and licensing questions
 
 Refunds follow Fab's standard refund policy. For licensing questions (what a purchase covers,
-seat/tier questions), see **FAQ** or ask in Discord.
+seat/tier questions), see [FAQ](../01-getting-started/faq.md) or ask in Discord.
 
 ## Full C++ source means you're never fully blocked
 

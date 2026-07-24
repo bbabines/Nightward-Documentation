@@ -62,7 +62,7 @@ and trust the result. Depth of verification is.
    `list_mutations` + `diff_blueprint` isolate the suspect mutation since the last green pass and
    `revert_mutation` rolls it back.
 3. **PIE as the acceptance gate.** "Done" means the edit actually runs in Play-In-Editor. Honest
-   scope: this rides *your own* test harness — it does not invent tests (see **Honest Limits**).
+   scope: this rides *your own* test harness — it does not invent tests (see [Honest Limits](../02-how-it-works/honest-limits.md)).
 4. **Execution trace.** `instrument_blueprint_trace` arms, triggers, and reads per-node hit counts
    in one call; a mutation journal records every tool call.
 

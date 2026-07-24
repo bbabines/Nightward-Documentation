@@ -47,7 +47,7 @@ execution trace, and none of the breadth competitors advertises the combination.
 
 The honest position: the best **combination** - verified editing + solid core-domain breadth + a
 maintained product with free updates + slightly cheaper - not a superset. Where a competitor
-genuinely covers more (see **How It Compares**), we say so and tell you to buy theirs.
+genuinely covers more (see [How It Compares](../02-how-it-works/how-it-compares.md)), we say so and tell you to buy theirs.
 
 ### You ship 485 tools. Why does the headline say "450+"?
 
@@ -99,7 +99,7 @@ the base tools anyone can get for free.
 
 ### Why should I trust a comparison written by the seller?
 
-Because it cedes. **How It Compares** names the domains where a competitor is the better buy -
+Because it cedes. [How It Compares](../02-how-it-works/how-it-compares.md) names the domains where a competitor is the better buy -
 biome-scale PCG depth, Chaos destruction/fields/fracture, deep trace analysis, async, PIE
 input-injection, full source-control submit - and tells you which product to use for each. A
 comparison that only ever concludes "buy ours" is marketing; one that sends you elsewhere when you
@@ -233,7 +233,7 @@ you through that client's own MCP-settings panel.
 ### What do I need to run it?
 
 Unreal Engine 5.4-5.8, Windows (Win64), the editor plugin (from Fab, Install to Engine or a
-project-relative drop both work), and one MCP-spec client. See **Install** and **Client Setup** for
+project-relative drop both work), and one MCP-spec client. See [Install](../01-getting-started/install.md) and [Client Setup](../01-getting-started/client-setup.md) for
 the exact steps - end to end it's one Fab install plus one command.
 
 *Synced from repo c806b31 - 2026-07-23*

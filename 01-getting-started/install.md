@@ -24,7 +24,7 @@ it doesn't exist), so the `.uplugin` file lives at
 The Fab download is a precompiled binary per engine version — it just loads, no C++ toolchain
 needed. Only a source checkout or a custom engine build prompts to build modules; allow it if
 asked. Confirm the plugin is enabled any time: **Edit > Plugins**, search "Nightward" — the next
-step (**Client Setup**) adds it to your project's `.uproject` for you either way, so you don't need
+step ([Client Setup](../01-getting-started/client-setup.md)) adds it to your project's `.uproject` for you either way, so you don't need
 to tick this yourself first.
 
 ## Requirements
@@ -33,4 +33,4 @@ to tick this yourself first.
   product.
 - One MCP-spec client: Claude Code, Cursor, Cline, Codex, or Claude Desktop.
 
-Next: **Client Setup** — connect your agent to the editor with one command.
+Next: [Client Setup](../01-getting-started/client-setup.md) — connect your agent to the editor with one command.

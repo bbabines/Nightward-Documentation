@@ -92,7 +92,7 @@ DATE ...`.
   breakage mid-session.
 - The message names the stale side. Update whichever it says - rebuild/reinstall the editor plugin,
   or update the Python bridge - so both are on the same release, then reconnect. (A same-version
-  update needs the client restart covered in **Quickstart** "Updating an existing install," not this
+  update needs the client restart covered in [Quickstart](../01-getting-started/quickstart.md) "Updating an existing install," not this
   fix.)
 
 ### 8. Plugin fails to load on UE 5.6+ (`GetLastError=126`)

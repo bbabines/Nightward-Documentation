@@ -56,4 +56,4 @@ re-checking by hand.
 - `instrument_blueprint_trace` — arms, triggers, and reads per-node hit counts in one call, the
   execution proof behind the PIE gate.
 
-See **Honest Limits** for what rides your own test harness rather than being invented for you.
+See [Honest Limits](../02-how-it-works/honest-limits.md) for what rides your own test harness rather than being invented for you.
