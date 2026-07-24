@@ -233,7 +233,8 @@ you through that client's own MCP-settings panel.
 ### What do I need to run it?
 
 Unreal Engine 5.4-5.8, Windows (Win64), the editor plugin (from Fab, Install to Engine or a
-project-relative drop both work), and one MCP-spec client. See [Install](../01-getting-started/install.md) and [Client Setup](../01-getting-started/client-setup.md) for
-the exact steps - end to end it's one Fab install plus one command.
+project-relative drop both work), one MCP-spec client, and Python on your computer (your agent
+checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/install.md) and
+[Quickstart](../01-getting-started/quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo 473b165 - 2026-07-24*
+*Synced from repo a1230e4 - 2026-07-24*

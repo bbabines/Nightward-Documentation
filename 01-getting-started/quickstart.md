@@ -1,25 +1,45 @@
 # Quickstart
 
-Install the plugin, connect your MCP client, run `doctor` green, then make one visible edit and see
-the real readback — about five minutes, no repo knowledge required.
+**What you need:** the plugin installed (see [Install](../01-getting-started/install.md)), and one AI coding agent already on your
+computer — Claude Code, Cursor, Cline, Codex, or Claude Desktop. You'll also need Python, but don't
+worry about that part: your agent checks for it and installs it for you if it's missing, explaining
+what it's about to do first.
 
-Prefer to skip the manual steps? Hand this quickstart to your coding agent and it can run the whole
-path itself (one command does the heavy lifting) — you only restart the client and approve the
-editor launch. All five supported clients can run this path; only a cloud/browser session with no
-local shell needs to follow the steps by hand.
+**What happens:** paste the prompt below into your agent's chat. It connects the editor to your
+agent and confirms it worked — about two minutes, no manual file editing.
 
-## Step 1 — Install
+## Copy this to your agent
+
+    I just installed the Nightward MCP plugin for Unreal Engine and want you to set it up for me.
+
+    1. Check whether Python is installed and available from the command line (`python --version` or
+       `python3 --version`). If it isn't, tell me exactly what you're about to install (e.g.
+       `winget install Python.Python.3.12` on Windows, `brew install python@3.12` on Mac,
+       `apt install python3` on Linux) and wait for me to say yes before running it.
+    2. From my project root (the folder with the .uproject file), run:
+       python Plugins/NightwardMCP/Content/Python/bootstrap.py --client <your client name, e.g. claude_code>
+       (use the Install-to-Engine path instead if that's how I installed it)
+    3. Tell me GREEN (done) or RED (show me the exact fix it printed) — don't guess past a RED.
+    4. If it's GREEN, ask if I want a quick product walkthrough.
+
+    Full technical detail if you need it: https://github.com/bbabines/Nightward-Documentation/blob/main/05-for-ai-agents/setup-protocol.md
+
+## Prefer to do it by hand, or don't have an agent yet?
+
+### Step 1 — Install
 
 Epic Games Launcher, **Install to Engine** for the UE version you use (or the project-relative drop
 if you prefer). Full steps: [Install](../01-getting-started/install.md).
 
-## Step 2 — Connect a client
+### Step 2 — Connect a client
 
 One command from your project root: `python bootstrap.py --project-path "<YourProject>.uproject"
 --client <name>`. It installs deps, registers your client, launches the editor, and prints GREEN or
-a specific RED with the fix. Full steps and per-client detail: [Client Setup](../01-getting-started/client-setup.md).
+a specific RED with the fix. Full technical detail (registration internals, manual fallback):
+[Agent Setup Protocol](../05-for-ai-agents/setup-protocol.md) — written for an agent, but every step is a plain command you can run
+yourself too.
 
-## Step 3 — Verify: `doctor`, then `verify_setup`
+### Step 3 — Verify: `doctor`, then `verify_setup`
 
 Ask your agent to call `doctor` first — the liveness check. It raw-socket pings the editor listener
 and reports each named check green/red with a one-line fix (`plugin_not_loaded`, `port_in_use`,
@@ -29,7 +49,7 @@ and reports each named check green/red with a one-line fix (`plugin_not_loaded`,
 the editor. Run it after `doctor` is green to confirm your operating profile (defaults to `solo`)
 and see each behavioral knob's value.
 
-## Step 4 — First visible win
+### Step 4 — First visible win
 
 Ask your agent to:
 
