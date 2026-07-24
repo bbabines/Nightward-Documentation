@@ -88,4 +88,4 @@ See `faq.md` "Honest limits" for the full buyer-facing list (asset import scope,
 submit, synchronous-only calls, no synthetic PIE input injection, PCG/Chaos scope, engine version
 range) - kept in one place there to avoid the ledger and the FAQ drifting apart.
 
-*Synced from repo c806b31 - 2026-07-23*
+*Synced from repo 3889f9f - 2026-07-24*

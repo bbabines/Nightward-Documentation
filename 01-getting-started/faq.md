@@ -236,4 +236,4 @@ Unreal Engine 5.4-5.8, Windows (Win64), the editor plugin (from Fab, Install to 
 project-relative drop both work), and one MCP-spec client. See [Install](../01-getting-started/install.md) and [Client Setup](../01-getting-started/client-setup.md) for
 the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo c806b31 - 2026-07-23*
+*Synced from repo 3889f9f - 2026-07-24*

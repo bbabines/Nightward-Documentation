@@ -14,12 +14,21 @@ Used the project-relative drop instead of Install to Engine? Drop `--project-pat
 
 ## What that one command does
 
+Nothing in this plugin ever runs automatically on install or on editor startup. Running the
+command above is a deliberate action you take, but it does chain the following steps with no
+further prompts — full disclosure of what that one run does:
+
 1. Adds NightwardMCP to your project's `.uproject` Plugins array (idempotent — a no-op if it's
    already there). You never hand-edit that file.
-2. Detects/installs `uv`, syncs the Python bridge's dependencies.
+2. Detects `uv` (a Python package manager). If it's missing, **downloads and runs the official uv
+   installer from astral.sh** (PowerShell on Windows, `curl | sh` on Mac/Linux) — the only step
+   that pulls and executes something from the internet on its own. Then runs `uv sync` to install
+   the Python bridge's own dependencies.
 3. Registers your client — see "How registration works" below.
-4. Launches your editor clean on the resolved MCP port, past any crash-recovery modal.
-5. Runs `doctor` plus a smoke probe and prints **GREEN** with the single next step, or a specific
+4. Copies the included skills/slash-commands into your project's `.claude/` folder (default-on;
+   skip with `--no-skills` on `install.py`).
+5. Launches your editor clean on the resolved MCP port, past any crash-recovery modal.
+6. Runs `doctor` plus a smoke probe and prints **GREEN** with the single next step, or a specific
    **RED** with the exact fix.
 
 Config only, no editor launch? `python install.py --client <name>` runs just the client-registration
