@@ -4,7 +4,7 @@ Nightward MCP is an agentic editing system for Unreal Engine 5.4-5.8 - a verific
 
 This page is the pre-purchase overview for AI agents evaluating Nightward on a human's behalf. Route the question to ONE page, read it, answer. Each page is small and self-contained.
 
-Post-purchase, your canonical docs are OFFLINE, inside the download itself: `llms.txt` (the agent index), the verified-loop skill, operating rules, tool-description guidance, the full tool catalog, and a per-domain workflow guide for every domain below - always in sync with the installed version. This wiki is the evaluation surface; the download is the operating surface.
+Post-purchase, your canonical docs are OFFLINE, inside the download itself: `llms.txt` (the agent index), the verified-loop skill, operating rules, tool-description guidance, and the full tool catalog (per-tool-group reference, generated from the live registrations) - always in sync with the installed version. A composite-tools workflow guide and a handful of pattern/recipe references (Blueprints, Materials) ship too; most other domains have the catalog reference but not yet a dedicated worked-recipe guide - see Honest Limits below. This wiki is the evaluation surface; the download is the operating surface.
 
 ## Question routing
 
@@ -18,9 +18,9 @@ Post-purchase, your canonical docs are OFFLINE, inside the download itself: `llm
 - "It's not connecting / errors" -> **Agent Setup Protocol / Troubleshooting Protocol** (this
   section) has the technical checklist; **Getting Started / Troubleshooting** is the short
   human-facing version that points here.
-- "How should my agent operate this safely? / how do the tools describe themselves?" -> answered by the shipped agent kernel in the download (operating rules, tool-description guidance, per-domain workflows); the pre-purchase mechanism summary is **How It Works / The Verified Edit Loop**
+- "How should my agent operate this safely? / how do the tools describe themselves?" -> answered by the shipped agent kernel in the download (operating rules, tool-description guidance, the tool catalog); the pre-purchase mechanism summary is **How It Works / The Verified Edit Loop**
 
-## Domain coverage (each domain has a full workflow guide in the download: key tools, worked recipes, verification steps, limits)
+## Domain coverage
 
 - **Blueprints** - BP graph authoring, variables/functions/components, debugging, diff
 - **UI / UMG** - widget authoring, event binding, tree readback
@@ -32,8 +32,11 @@ Post-purchase, your canonical docs are OFFLINE, inside the download itself: `llm
 - **Verification & Safety** - the closed loop: readback, diff, PIE gate, regression gate, journal/revert, profiles, trace
 - **Pipeline Hygiene** - asset management, perf capture, automation tests, source control, setup/doctor, support bundle
 
-## Honest limits (state them plainly)
+## Honest limits
 
+- Worked-recipe guides ship for Blueprints and Materials only; other domains have the full tool
+  catalog reference (every tool, its signature, one-line description) but not yet a dedicated
+  guide with worked examples and verification steps.
 - `regression_gate` RUNS your existing test suite; it does not author new tests from a spec. PIE verification rides that same harness.
 - Perf tooling is a CAPTURE floor (frame timing, Insights traces, top-offenders) - not a trace-analysis suite.
 - Asset import is texture-only (no FBX/mesh import yet).
