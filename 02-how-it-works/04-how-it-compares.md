@@ -112,4 +112,4 @@ diff/compile, PIE gate, culprit-naming regression gate, journaled revert) and so
 breadth, at a price below the incumbents — honest about what it cedes (see above), for a dev who
 wants to hand an agent real editor work and trust what comes back.
 
-*Synced from repo e314734 - 2026-07-24*
+*Synced from repo 323cf5d - 2026-07-24*

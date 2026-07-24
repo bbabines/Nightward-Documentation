@@ -28,9 +28,8 @@ an Install-to-Engine copy instead of a project-relative drop? The script lives a
 `<Engine>/Plugins/Marketplace/NightwardMCP/Content/Python/bootstrap.py`.
 
 This one command auto-chains the rest with no further prompts needed from you: enables the plugin
-in the `.uproject`, installs `uv` if missing (downloads the official installer from astral.sh —
-this one step runs silently, unlike Python above, since it's scoped to this bridge's own venv, not
-the system), syncs the bridge's Python deps, registers your client (see below), copies the
+in the `.uproject`, installs `uv` if missing (via `pip install uv` — no remote installer script is
+downloaded or run), syncs the bridge's Python deps, registers your client (see below), copies the
 skills/commands kit into `.claude/` (default-on), relaunches the editor clean past any
 crash-recovery modal, then runs `doctor` plus a smoke probe.
 
