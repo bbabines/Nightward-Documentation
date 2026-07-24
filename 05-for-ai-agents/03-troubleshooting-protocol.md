@@ -65,8 +65,8 @@ your project or engine version, and gets a not-found / unresolved error.
 The config points at a directory or interpreter that no longer exists - the bridge cannot self-report
 this, since the missing files are its own.
 
-- **You moved or renamed the plugin folder** - the hardcoded `--directory .../NightwardMCP/Python` in
-  your client config is stale.
+- **You moved or renamed the plugin folder** - the hardcoded
+  `--directory .../NightwardMCP/Content/Python` in your client config is stale.
 - **You uninstalled the plugin** - that directory is gone.
 - **`python`/`uv` was removed after a working install.**
 - Fix for all three: re-run `python bootstrap.py` (or `python install.py`) to reinstall `uv`/deps
@@ -99,17 +99,19 @@ DATE ...`.
   update needs the client restart covered in [Install](../01-getting-started/02-install.md) "Updating an existing install," not this
   fix.)
 
-### 8. Plugin fails to load on UE 5.6+ (`GetLastError=126`)
+### 8. Plugin fails to load on UE 5.8 (`GetLastError=126`)
 
-A dependent engine module isn't on the loader path. Enable the **ChaosOutfitAsset** engine plugin
-(Edit > Plugins, tick it on) and restart. Shipped 5.6+ binaries load this automatically; this mainly
-applies to source builds or edge hosts.
+On UE 5.8 the outfit tools link the engine's `ChaosOutfitAsset` plugin. If a dependent engine module
+isn't on the loader path, enable the **ChaosOutfitAsset** engine plugin (Edit > Plugins, tick it on)
+and restart - shipped 5.8 binaries load it automatically, so this mainly applies to source builds or
+edge hosts. UE 5.4-5.7 do NOT link this module (the outfit tools are gated to 5.8+ because
+`ChaosOutfitAsset` is Experimental and does not load cleanly there), so they are unaffected.
 
 ### 9. Editor crashed / PIE wedged / "Restore Packages" modal
 
 An auto-save crash-recovery modal can hold the game thread (0x0 viewport, `start_pie` hangs on
 `play_request_pending`, tools return a bare `NEEDS_RESTART`). Run
-`python Plugins/NightwardMCP/tools/recover_editor.py` - it kills the wedged editor, clears the
+`python Plugins/NightwardMCP/Content/Python/tools/recover_editor.py` - it kills the wedged editor, clears the
 crash-recovery manifest, relaunches clean, and waits for the listener.
 
 ## Anti-patterns (do NOT do these)

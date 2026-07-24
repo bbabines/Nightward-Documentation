@@ -237,4 +237,4 @@ project-relative drop both work), one MCP-spec client, and Python on your comput
 checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and
 [Quickstart](../01-getting-started/03-quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo 323cf5d - 2026-07-24*
+*Synced from repo 3ea27f0 - 2026-07-24*
