@@ -148,10 +148,7 @@ Stated candidly, because a visible limits section is engineering credibility for
   compiler, PIE slot) that is unsolved industry-wide. Drive one agent at a time.
 - **No third-party asset-generation bundling** (e.g. Meshy/Tripo) - we are a verified automation layer,
   not a content service.
-- **UE 5.4-5.8** at launch, Windows editor. macOS support is planned post-launch. One open bug on
-  5.4/5.5 only: Animation state-machine, blendspace and frame-timing commands currently come back
-  with a wrong "Outfit commands require UE 5.8+" error. It is a routing defect being fixed, not a
-  capability limit - see [Honest Limits](../02-how-it-works/03-honest-limits.md).
+- **UE 5.4-5.8** at launch, Windows editor. macOS support is planned post-launch.
 
 ### What about token / context cost?
 
@@ -240,4 +237,4 @@ project-relative drop both work), one MCP-spec client, and Python on your comput
 checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and
 [Quickstart](../01-getting-started/03-quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo 214b9b3 - 2026-07-24*
+*Synced from repo 811c98a - 2026-07-24*
