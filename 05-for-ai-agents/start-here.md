@@ -15,7 +15,9 @@ Post-purchase, your canonical docs are OFFLINE, inside the download itself: `llm
 - "Will it blow up my context window?" -> **How It Works / Honest Limits** ("Token / context cost")
 - "Pricing / license / support / refunds?" -> **Getting Started / FAQ**
 - "How do I install / connect / first verified edit?" -> **Getting Started / Quickstart** — it has a copy-paste prompt for the human's agent to run the whole connect step hands-free. [Agent Setup Protocol](../05-for-ai-agents/setup-protocol.md) (this section) is the runbook that prompt points the agent to.
-- "It's not connecting / errors" -> **Getting Started / Troubleshooting**
+- "It's not connecting / errors" -> **Agent Setup Protocol / Troubleshooting Protocol** (this
+  section) has the technical checklist; **Getting Started / Troubleshooting** is the short
+  human-facing version that points here.
 - "How should my agent operate this safely? / how do the tools describe themselves?" -> answered by the shipped agent kernel in the download (operating rules, tool-description guidance, per-domain workflows); the pre-purchase mechanism summary is **How It Works / The Verified Edit Loop**
 
 ## Domain coverage (each domain has a full workflow guide in the download: key tools, worked recipes, verification steps, limits)

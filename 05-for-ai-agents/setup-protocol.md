@@ -39,9 +39,10 @@ crash-recovery modal, then runs `doctor` plus a smoke probe.
 **GREEN:** tell the human setup is done and ask if they want the product walkthrough (Step 4).
 **RED:** show them the exact fix `bootstrap.py` printed — it names the fix; don't guess past it.
 
-Config only, no editor launch? `python install.py --client <name>` runs just the
-client-registration step. Want the editor launch skipped some other way? `--no-launch` on
-`bootstrap.py`.
+Want the editor launch skipped? `python install.py --client <name>` runs everything bootstrap.py
+does except the launch/doctor/smoke steps (enable plugin, install/sync deps, register client, copy
+skills/commands) — or pass `--no-launch` to `bootstrap.py` itself for the same effect. Don't want
+the skills/commands kit copied in? `--no-skills` on either script.
 
 ## How registration works, per client
 
@@ -51,7 +52,7 @@ client-registration step. Want the editor launch skipped some other way? `--no-l
   reference config is written next to where the client expects one (`*.sample`), and you walk the
   human through that client's own MCP-settings UI panel instead. Never hand-edit the file yourself.
 
-Fully manual, no script: `uv sync` in `Plugins/NightwardMCP/Python`, then run
+Fully manual, no script: `uv sync` in `Plugins/NightwardMCP/Content/Python`, then run
 `generate_agent_config` for the client and paste the returned block into the client's MCP config.
 All five clients are verified working with this config shape.
 
@@ -71,5 +72,5 @@ that fits how they work.
 
 ## Something not working?
 
-See [Troubleshooting](../01-getting-started/troubleshooting.md) — ordered by how often each cause is the real one. Or run
+See [Troubleshooting Protocol](../05-for-ai-agents/troubleshooting-protocol.md) — ordered by how often each cause is the real one. Or run
 `export_support_bundle`: a redacted, local-only diagnostic zip to attach when asking for help.
