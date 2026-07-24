@@ -32,5 +32,8 @@ to tick this yourself first.
 - Unreal Engine 5.4–5.8, Windows (Win64) editor. Newer engines expose more tools; 5.8 is the full
   product.
 - One MCP-spec client: Claude Code, Cursor, Cline, Codex, or Claude Desktop.
+- **Python 3 installed and on PATH.** The plugin does not install Python for you — the setup
+  script itself is a Python script, so this has to already be there. (Setup *does* auto-install
+  `uv`, a separate Python package manager, if it's missing — see [Client Setup](../01-getting-started/client-setup.md).)
 
 Next: [Client Setup](../01-getting-started/client-setup.md) — connect your agent to the editor with one command.

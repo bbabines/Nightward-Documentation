@@ -71,4 +71,4 @@ account, no cloud round-trip.
 Wide coverage is only half of it. The other half is that **every** edit above is applied, read back,
 compiled, and PIE-tested before it's called done — see [The Verified Edit Loop](../02-how-it-works/verified-edit-loop.md) and [Honest Limits](../02-how-it-works/honest-limits.md).
 
-*Synced from repo 3889f9f - 2026-07-24*
+*Synced from repo 473b165 - 2026-07-24*
