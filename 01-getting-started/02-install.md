@@ -24,7 +24,7 @@ it doesn't exist), so the `.uplugin` file lives at
 The Fab download is a precompiled binary per engine version — it just loads, no C++ toolchain
 needed. Only a source checkout or a custom engine build prompts to build modules; allow it if
 asked. Confirm the plugin is enabled any time: **Edit > Plugins**, search "Nightward" — the next
-step ([Quickstart](../01-getting-started/quickstart.md)) adds it to your project's `.uproject` for you either way, so you don't need
+step ([Quickstart](../01-getting-started/03-quickstart.md)) adds it to your project's `.uproject` for you either way, so you don't need
 to tick this yourself first.
 
 ## Requirements
@@ -36,21 +36,21 @@ to tick this yourself first.
   Python has to already be there to run it — the plugin can't install its own prerequisite. If
   you're not sure whether you have it, don't worry: your agent checks for you as the first thing
   it does, and offers to install it if it's missing (explaining what it's about to do first). See
-  [Agent Setup Protocol](../05-for-ai-agents/setup-protocol.md) for exactly what "installs `uv`" (a helper tool) means if you're curious.
+  [Agent Setup Protocol](../05-for-ai-agents/02-setup-protocol.md) for exactly what "installs `uv`" (a helper tool) means if you're curious.
 
-Next: [Quickstart](../01-getting-started/quickstart.md) — connect your agent to the editor with one command.
+Next: [Quickstart](../01-getting-started/03-quickstart.md) — connect your agent to the editor with one command.
 
 ## Manual setup, step by step
 
 For readers doing this without an agent, or who want every step spelled out. Prefer to just paste
-a prompt and let your agent handle it? See [Quickstart](../01-getting-started/quickstart.md) instead.
+a prompt and let your agent handle it? See [Quickstart](../01-getting-started/03-quickstart.md) instead.
 
 ### Connect a client
 
 One command from your project root: `python bootstrap.py --project-path "<YourProject>.uproject"
 --client <name>`. It installs deps, registers your client, launches the editor, and prints GREEN or
 a specific RED with the fix. Full technical detail (registration internals, manual fallback):
-[Agent Setup Protocol](../05-for-ai-agents/setup-protocol.md) — written for an agent, but every step is a plain command you can run
+[Agent Setup Protocol](../05-for-ai-agents/02-setup-protocol.md) — written for an agent, but every step is a plain command you can run
 yourself too.
 
 ### Verify: `doctor`, then `verify_setup`

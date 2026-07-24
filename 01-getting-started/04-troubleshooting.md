@@ -6,7 +6,7 @@ usually fix them itself.
 ## Ask your agent to diagnose it
 
 Tell your agent: *"Something's not working with Nightward MCP — read the Troubleshooting Protocol
-and figure out what's wrong: https://github.com/bbabines/Nightward-Documentation/blob/main/05-for-ai-agents/troubleshooting-protocol.md"*
+and figure out what's wrong: https://github.com/bbabines/Nightward-Documentation/blob/main/05-for-ai-agents/03-troubleshooting-protocol.md"*
 It has the full technical checklist (connection issues, wrong port, stale schemas, and more) and
 can usually fix it directly.
 
@@ -15,7 +15,7 @@ can usually fix it directly.
 - Make sure Unreal Engine is open and the plugin is enabled (**Edit > Plugins**, search
   "Nightward").
 - Restart your AI agent/client so it reconnects.
-- Just updated the plugin? Fully quit and reopen your client (not just reload) — see [Install](../01-getting-started/install.md),
+- Just updated the plugin? Fully quit and reopen your client (not just reload) — see [Install](../01-getting-started/02-install.md),
   "Updating an existing install."
 
 ## Still stuck?

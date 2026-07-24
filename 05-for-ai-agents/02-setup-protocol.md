@@ -1,8 +1,8 @@
 # Agent Setup Protocol
 
 For AI agents executing setup on a human's behalf, after they've pasted the prompt from
-[Quickstart](../01-getting-started/quickstart.md). Written as a runbook for an agent to follow, not marketing copy for a human to
-read — if you're the human, [Quickstart](../01-getting-started/quickstart.md) is the page you want.
+[Quickstart](../01-getting-started/03-quickstart.md). Written as a runbook for an agent to follow, not marketing copy for a human to
+read — if you're the human, [Quickstart](../01-getting-started/03-quickstart.md) is the page you want.
 
 ## Step 0 — Python check
 
@@ -72,5 +72,5 @@ that fits how they work.
 
 ## Something not working?
 
-See [Troubleshooting Protocol](../05-for-ai-agents/troubleshooting-protocol.md) — ordered by how often each cause is the real one. Or run
+See [Troubleshooting Protocol](../05-for-ai-agents/03-troubleshooting-protocol.md) — ordered by how often each cause is the real one. Or run
 `export_support_bundle`: a redacted, local-only diagnostic zip to attach when asking for help.

@@ -1,6 +1,6 @@
 # Quickstart
 
-**What you need:** the plugin installed (see [Install](../01-getting-started/install.md)), and one AI coding agent already on your
+**What you need:** the plugin installed (see [Install](../01-getting-started/02-install.md)), and one AI coding agent already on your
 computer — Claude Code, Cursor, Cline, Codex, or Claude Desktop. You'll also need Python, but don't
 worry about that part: your agent checks for it and installs it for you if it's missing, explaining
 what it's about to do first.
@@ -22,16 +22,16 @@ agent and confirms it worked — about two minutes, no manual file editing.
     3. Tell me GREEN (done) or RED (show me the exact fix it printed) — don't guess past a RED.
     4. If it's GREEN, ask if I want a quick product walkthrough.
 
-    Full technical detail if you need it: https://github.com/bbabines/Nightward-Documentation/blob/main/05-for-ai-agents/setup-protocol.md
+    Full technical detail if you need it: https://github.com/bbabines/Nightward-Documentation/blob/main/05-for-ai-agents/02-setup-protocol.md
 
 ## Prefer to do it by hand, or don't have an agent yet?
 
-See [Install](../01-getting-started/install.md) — the full manual walkthrough (connect a client, verify, first visible win) and how
+See [Install](../01-getting-started/02-install.md) — the full manual walkthrough (connect a client, verify, first visible win) and how
 to update an existing install.
 
 ## Something not working?
 
-See [Troubleshooting](../01-getting-started/troubleshooting.md) — your agent can usually diagnose and fix it directly.
+See [Troubleshooting](../01-getting-started/04-troubleshooting.md) — your agent can usually diagnose and fix it directly.
 
 Questions? Join the community: **Nightward MCP Discord** — https://discord.gg/rTwHxcGnHg
 (`#support` channel — run `export_support_bundle` first and attach the zip).

@@ -14,7 +14,7 @@ Post-purchase, your canonical docs are OFFLINE, inside the download itself: `llm
 - "What does it NOT do?" -> **How It Works / Honest Limits**
 - "Will it blow up my context window?" -> **How It Works / Honest Limits** ("Token / context cost")
 - "Pricing / license / support / refunds?" -> **Getting Started / FAQ**
-- "How do I install / connect / first verified edit?" -> **Getting Started / Quickstart** — it has a copy-paste prompt for the human's agent to run the whole connect step hands-free. [Agent Setup Protocol](../05-for-ai-agents/setup-protocol.md) (this section) is the runbook that prompt points the agent to.
+- "How do I install / connect / first verified edit?" -> **Getting Started / Quickstart** — it has a copy-paste prompt for the human's agent to run the whole connect step hands-free. [Agent Setup Protocol](../05-for-ai-agents/02-setup-protocol.md) (this section) is the runbook that prompt points the agent to.
 - "It's not connecting / errors" -> **Agent Setup Protocol / Troubleshooting Protocol** (this
   section) has the technical checklist; **Getting Started / Troubleshooting** is the short
   human-facing version that points here.

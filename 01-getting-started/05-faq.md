@@ -47,7 +47,7 @@ execution trace, and none of the breadth competitors advertises the combination.
 
 The honest position: the best **combination** - verified editing + solid core-domain breadth + a
 maintained product with free updates + slightly cheaper - not a superset. Where a competitor
-genuinely covers more (see [How It Compares](../02-how-it-works/how-it-compares.md)), we say so and tell you to buy theirs.
+genuinely covers more (see [How It Compares](../02-how-it-works/04-how-it-compares.md)), we say so and tell you to buy theirs.
 
 ### You ship 485 tools. Why does the headline say "450+"?
 
@@ -56,7 +56,7 @@ is a number that stops being true the moment a tool lands. We would rather under
 can check than post a number that quietly rots. It is the same instinct as the rest of the product:
 state what you can prove, and let the evidence be bigger than the promise.
 
-The real figure, stated plainly: 485 tools across 42 groups, per the generated
+The real figure, stated plainly: 450+ tools across 42 groups, per the generated
 `docs/agents/tool-api/INDEX.md`, re-counted at publish. We don't inflate it, and we don't round it
 up.
 
@@ -99,7 +99,7 @@ the base tools anyone can get for free.
 
 ### Why should I trust a comparison written by the seller?
 
-Because it cedes. [How It Compares](../02-how-it-works/how-it-compares.md) names the domains where a competitor is the better buy -
+Because it cedes. [How It Compares](../02-how-it-works/04-how-it-compares.md) names the domains where a competitor is the better buy -
 biome-scale PCG depth, Chaos destruction/fields/fracture, deep trace analysis, async, PIE
 input-injection, full source-control submit - and tells you which product to use for each. A
 comparison that only ever concludes "buy ours" is marketing; one that sends you elsewhere when you
@@ -234,7 +234,7 @@ you through that client's own MCP-settings panel.
 
 Unreal Engine 5.4-5.8, Windows (Win64), the editor plugin (from Fab, Install to Engine or a
 project-relative drop both work), one MCP-spec client, and Python on your computer (your agent
-checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/install.md) and
-[Quickstart](../01-getting-started/quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
+checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and
+[Quickstart](../01-getting-started/03-quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo a8f1f8f - 2026-07-24*
+*Synced from repo e314734 - 2026-07-24*

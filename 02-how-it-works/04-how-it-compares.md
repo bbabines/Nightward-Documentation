@@ -20,7 +20,7 @@ agent kernel — the verified-loop skill.
 - **Verified editing** — every mutation is read back from the live editor and returned as
   evidence, a regression gate names the mutation that broke a test, and PIE behavior is the
   acceptance gate.
-- **Solid breadth** across the domains most real work needs (485 tools across 42 groups) — enough to do
+- **Solid breadth** across the domains most real work needs (450+ tools across 42 groups) — enough to do
   the job, deliberately not a count race.
 - **A maintained product** — a maintenance cadence keeps it current with the engine, with free
   updates.
@@ -38,7 +38,7 @@ anyone can get for free.
 
 ## Why tool count is the wrong metric
 
-The category races on raw tool counts. Nightward ships 485 tools across 42 groups (per the generated
+The category races on raw tool counts. Nightward ships 450+ tools across 42 groups (per the generated
 `docs/agents/tool-api/INDEX.md`) and does not try to win that race, for three reasons:
 
 1. **A larger tool that silently fails is worse than a smaller one that proves itself.** A count
@@ -62,7 +62,7 @@ and trust the result. Depth of verification is.
    `list_mutations` + `diff_blueprint` isolate the suspect mutation since the last green pass and
    `revert_mutation` rolls it back.
 3. **PIE as the acceptance gate.** "Done" means the edit actually runs in Play-In-Editor. Honest
-   scope: this rides *your own* test harness — it does not invent tests (see [Honest Limits](../02-how-it-works/honest-limits.md)).
+   scope: this rides *your own* test harness — it does not invent tests (see [Honest Limits](../02-how-it-works/03-honest-limits.md)).
 4. **Execution trace.** `instrument_blueprint_trace` arms, triggers, and reads per-node hit counts
    in one call; a mutation journal records every tool call.
 
@@ -112,4 +112,4 @@ diff/compile, PIE gate, culprit-naming regression gate, journaled revert) and so
 breadth, at a price below the incumbents — honest about what it cedes (see above), for a dev who
 wants to hand an agent real editor work and trust what comes back.
 
-*Synced from repo a8f1f8f - 2026-07-24*
+*Synced from repo e314734 - 2026-07-24*

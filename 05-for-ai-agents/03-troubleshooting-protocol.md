@@ -1,7 +1,7 @@
 # Troubleshooting Protocol
 
 For AI agents diagnosing a setup or connection problem on a human's behalf. Written as a runbook,
-not marketing copy for a human to read — if you're the human, [Troubleshooting](../01-getting-started/troubleshooting.md) is the page you
+not marketing copy for a human to read — if you're the human, [Troubleshooting](../01-getting-started/04-troubleshooting.md) is the page you
 want (it tells you to point your agent here).
 
 Most first-run problems are one of a handful of setup issues, not a bug in your edit. Work top to
@@ -96,7 +96,7 @@ DATE ...`.
   breakage mid-session.
 - The message names the stale side. Update whichever it says - rebuild/reinstall the editor plugin,
   or update the Python bridge - so both are on the same release, then reconnect. (A same-version
-  update needs the client restart covered in [Install](../01-getting-started/install.md) "Updating an existing install," not this
+  update needs the client restart covered in [Install](../01-getting-started/02-install.md) "Updating an existing install," not this
   fix.)
 
 ### 8. Plugin fails to load on UE 5.6+ (`GetLastError=126`)
