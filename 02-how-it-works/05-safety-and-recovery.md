@@ -41,4 +41,4 @@ boundary.
 - `configuration.md` — `destructive_ops` / `checkpoint_cadence` knobs.
 - `faq.md` / `gaps-ledger.md`
 
-*Synced from repo 3ed8353 - 2026-07-29*
+*Synced from repo 2e1de2c - 2026-07-29*

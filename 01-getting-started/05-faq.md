@@ -150,11 +150,14 @@ Stated candidly, because a visible limits section is engineering credibility for
   Perforce/SVN submit/resolve/history). Git projects rarely feel this: your agent's own shell commits
   and pushes natively; the MCP adds checkout-awareness so mutations respect locked files.
 - **All tool calls are synchronous** - no background/async tasks, no SSE progress streaming.
-- **No synthetic raw input in PIE** - the agent drives gameplay through console commands
+- **No OS/HID-level raw input in PIE** - `inject_input` drives synthetic keyboard/mouse/gamepad
+  events directly through `APlayerController::InputKey` (engine-API level, not real hardware-level
+  input), and the agent can also drive gameplay through console commands
   (`exec_console_command`): expose your game's debug/cheat commands and it can trigger and verify
-  behavior, which is exactly how our own test harness works. It does not inject keyboard/mouse events.
+  behavior, which is exactly how our own test harness works.
 - **No truly concurrent multi-agent editing** - an engine-level constraint (single transaction stack,
-  compiler, PIE slot) that is unsolved industry-wide. Drive one agent at a time.
+  compiler, PIE slot) that is unsolved industry-wide, Epic's own MCP included. Drive one agent at a
+  time.
 - **No third-party asset-generation bundling** (e.g. Meshy/Tripo) - we are a verified automation layer,
   not a content service.
 - **UE 5.4-5.8** at launch, Windows editor. macOS support is planned post-launch.
@@ -243,7 +246,7 @@ you through that client's own MCP-settings panel.
 
 Unreal Engine 5.4-5.8, Windows (Win64), the editor plugin (from Fab, Install to Engine or a
 project-relative drop both work), one MCP-spec client, and Python on your computer (your agent
-checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and
-[Quickstart](../01-getting-started/03-quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
+checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and [Quickstart](../01-getting-started/03-quickstart.md) for
+the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo 3ed8353 - 2026-07-29*
+*Synced from repo 2e1de2c - 2026-07-29*
