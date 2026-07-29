@@ -33,5 +33,5 @@ to update an existing install.
 
 See [Troubleshooting](../01-getting-started/04-troubleshooting.md) — your agent can usually diagnose and fix it directly.
 
-Questions? Join the community: **Nightward MCP Discord** — https://discord.gg/rTwHxcGnHg
+Questions? Join the community: **Nightward MCP Discord** — https://discord.gg/Zqdvqx3XjE
 (`#support` channel — run `export_support_bundle` first and attach the zip).

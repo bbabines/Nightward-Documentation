@@ -84,5 +84,5 @@ old server code once at launch and won't notice the files changed under it. Conf
 new version: compare the updated `.uplugin` `VersionName` against `server_meta.plugin_version` on
 any tool response. If they don't match, fully quit and reopen the client (not just reload).
 
-Questions? Join the community: **Nightward MCP Discord** — https://discord.gg/rTwHxcGnHg
+Questions? Join the community: **Nightward MCP Discord** — https://discord.gg/Zqdvqx3XjE
 (`#support` channel — run `export_support_bundle` and attach the zip).

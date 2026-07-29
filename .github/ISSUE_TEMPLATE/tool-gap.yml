@@ -1,0 +1,52 @@
+name: Tool Gap / Bug Report
+description: A Nightward MCP tool didn't work as expected, or a capability seems to be missing.
+title: "[Gap]: "
+labels: ["gap-report", "needs-triage"]
+body:
+  - type: input
+    id: tool_name
+    attributes:
+      label: Tool or feature name
+      placeholder: "e.g. add_niagara_module, or \"PCG graph parameter reordering\""
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: AI client
+      options:
+        - Claude Code
+        - Cursor
+        - Cline
+        - Codex
+        - Claude Desktop
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin version / UE version
+      placeholder: "e.g. NightwardMCP 1.2.0, UE 5.8"
+    validations:
+      required: false
+  - type: textarea
+    id: what_tried
+    attributes:
+      label: What you tried
+      description: The exact call or action you made.
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: Error message, wrong result, or "nothing" if the tool doesn't exist.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: false

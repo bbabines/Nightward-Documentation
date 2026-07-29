@@ -20,5 +20,5 @@ can usually fix it directly.
 
 ## Still stuck?
 
-Join the community: **Nightward MCP Discord** — https://discord.gg/rTwHxcGnHg (`#support` channel —
+Join the community: **Nightward MCP Discord** — https://discord.gg/Zqdvqx3XjE (`#support` channel —
 run `export_support_bundle` first and attach the zip).

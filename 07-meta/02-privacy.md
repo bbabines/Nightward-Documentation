@@ -7,7 +7,7 @@ opt-in telemetry stream contains if you enable it, and your rights over it.
 ## What we collect (opt-in only)
 
 Only if you opt in. Each event carries exactly these fields and nothing else (this is the live
-allowlist in `Python/helpers/telemetry.py`, `TELEMETRY_SCHEMA_VERSION`):
+allowlist in `Content/Python/helpers/telemetry.py`, `TELEMETRY_SCHEMA_VERSION`):
 
 | Field | What it is |
 | --- | --- |

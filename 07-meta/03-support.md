@@ -4,7 +4,7 @@
 
 A community channel plus best-effort email, no per-ticket SLA:
 
-- **Discord:** https://discord.gg/rTwHxcGnHg — the `#support` channel.
+- **Discord:** https://discord.gg/Zqdvqx3XjE — the `#support` channel.
 - **Email:** the seller contact on the Fab listing.
 
 ## Start with a support bundle

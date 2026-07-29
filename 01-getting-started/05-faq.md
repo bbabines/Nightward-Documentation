@@ -49,9 +49,9 @@ The honest position: the best **combination** - verified editing + solid core-do
 maintained product with free updates + slightly cheaper - not a superset. Where a competitor
 genuinely covers more (see [How It Compares](../02-how-it-works/04-how-it-compares.md)), we say so and tell you to buy theirs.
 
-### You ship 485 tools. Why does the headline say "450+"?
+### You ship 489 tools. Why does the headline say "450+"?
 
-Because "450+" is a floor we can still honour after the next release, and 485
+Because "450+" is a floor we can still honour after the next release, and 489
 is a number that stops being true the moment a tool lands. We would rather under-state a claim you
 can check than post a number that quietly rots. It is the same instinct as the rest of the product:
 state what you can prove, and let the evidence be bigger than the promise.
@@ -87,6 +87,15 @@ It names four mechanisms you can watch on screen or read in a returned payload:
    one call; a JSONL changelog records every tool call.
 
 If we cannot show a claim in a payload or on screen, we do not make it.
+
+### If my agent breaks something, what can I actually get back?
+
+Depends what it touched. There are three separate mechanisms, not one - native editor undo
+(automatic, no setup, ~130 common Blueprint/UMG/material/Niagara/PCG commands), a surgical
+mutation-journal revert (`revert_mutation`, 6 commands, undoes one edit without touching anything
+after it), and a checkpoint/restore layer that reaches any asset type but is normally opt-in
+(automatic only for delete/rename/move-asset). Outside those, there is genuinely no safety net
+unless a checkpoint was taken first. Full breakdown of what's covered by which: [Safety & Recovery](../02-how-it-works/05-safety-and-recovery.md).
 
 ### You forked an open-source MCP. Why pay for this?
 
@@ -237,4 +246,4 @@ project-relative drop both work), one MCP-spec client, and Python on your comput
 checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and
 [Quickstart](../01-getting-started/03-quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo 811c98a - 2026-07-24*
+*Synced from repo 3ed8353 - 2026-07-29*
