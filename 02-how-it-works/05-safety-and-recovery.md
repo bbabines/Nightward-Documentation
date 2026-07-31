@@ -13,7 +13,7 @@ step-by-step recovery recipe, see `safety-and-recovery-reference.md` in the plug
 | **What it is** | Unreal's own undo stack — the same as Ctrl+Z | A logged changelog entry, replayed in reverse | A binary snapshot of the asset file, outside the undo stack |
 | **Use it when** | You want to step back through recent Blueprint/UMG/material/Niagara/PCG edits | You want to undo one specific mutation without touching anything after it | You're about to touch anything else — any asset type, any domain |
 | **How to trigger** | `undo_last(count)` | `revert_mutation({seq: mcp_seq})` — `mcp_seq` is on the original mutation's own response | `checkpoint()` before the risky edit, then `restore_checkpoint(checkpoint_id, confirm=true)` if needed |
-| **Setup needed** | None — automatic for ~130 eligible commands | None to log; reverting is a call you make | Call `checkpoint()` yourself first — except `delete_asset`/`rename_asset`/`move_asset`, which auto-checkpoint |
+| **Setup needed** | None — automatic for ~131 eligible commands | None to log; reverting is a call you make | Call `checkpoint()` yourself first — except `delete_asset`/`rename_asset`/`move_asset`, which auto-checkpoint |
 
 ## Which one applies to me?
 
@@ -41,4 +41,4 @@ boundary.
 - `configuration.md` — `destructive_ops` / `checkpoint_cadence` knobs.
 - `faq.md` / `gaps-ledger.md`
 
-*Synced from repo 2e1de2c - 2026-07-29*
+*Synced from repo 8ef1ac6 - 2026-07-31*

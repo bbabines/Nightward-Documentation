@@ -1,9 +1,9 @@
 # Quickstart
 
 **What you need:** the plugin installed (see [Install](../01-getting-started/02-install.md)), and one AI coding agent already on your
-computer — Claude Code, Cursor, Cline, Codex, or Claude Desktop. You'll also need Python, but don't
-worry about that part: your agent checks for it and installs it for you if it's missing, explaining
-what it's about to do first.
+computer — Claude Code, Cursor, Cline, Codex, or Claude Desktop. You'll also need Python 3 already
+on your machine — nothing auto-installs it for you. If it's missing, your agent will spot the error
+and walk you through installing it (explaining what it's about to do first), then you re-run.
 
 **What happens:** paste the prompt below into your agent's chat. It connects the editor to your
 agent and confirms it worked — about two minutes, no manual file editing.

@@ -54,4 +54,4 @@ that. This is for when you want to walk away and still trust the result.
 - [What's Included](../02-how-it-works/02-whats-included.md) — the domains you can build in.
 - [How It Compares](../02-how-it-works/04-how-it-compares.md) — positioning, pricing, and what it cedes to other servers.
 
-*Synced from repo 2e1de2c - 2026-07-29*
+*Synced from repo 8ef1ac6 - 2026-07-31*

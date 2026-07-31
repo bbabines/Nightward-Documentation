@@ -57,8 +57,8 @@ can check than post a number that quietly rots. It is the same instinct as the r
 state what you can prove, and let the evidence be bigger than the promise.
 
 The real figure, stated plainly: 450+ tools across 42 groups, per the generated
-`docs/agents/tool-api/INDEX.md`, re-counted at publish. We don't inflate it, and we don't round it
-up.
+`catalog/INDEX.md` shipped alongside this FAQ, re-counted at publish. We don't inflate it, and we
+don't round it up.
 
 ### Isn't a tool count the wrong thing to compare on anyway?
 
@@ -91,7 +91,7 @@ If we cannot show a claim in a payload or on screen, we do not make it.
 ### If my agent breaks something, what can I actually get back?
 
 Depends what it touched. There are three separate mechanisms, not one - native editor undo
-(automatic, no setup, ~130 common Blueprint/UMG/material/Niagara/PCG commands), a surgical
+(automatic, no setup, ~131 common Blueprint/UMG/material/Niagara/PCG commands), a surgical
 mutation-journal revert (`revert_mutation`, 6 commands, undoes one edit without touching anything
 after it), and a checkpoint/restore layer that reaches any asset type but is normally opt-in
 (automatic only for delete/rename/move-asset). Outside those, there is genuinely no safety net
@@ -156,8 +156,13 @@ Stated candidly, because a visible limits section is engineering credibility for
   (`exec_console_command`): expose your game's debug/cheat commands and it can trigger and verify
   behavior, which is exactly how our own test harness works.
 - **No truly concurrent multi-agent editing** - an engine-level constraint (single transaction stack,
-  compiler, PIE slot) that is unsolved industry-wide, Epic's own MCP included. Drive one agent at a
-  time.
+  compiler, PIE slot) that is unsolved industry-wide, Epic's own MCP included. The bridge is stricter
+  still: it accepts exactly one TCP client, so a second agent (or tool) is refused (`SERVER_BUSY`) the
+  instant it connects, even for a read-only check-in, not only when it tries to mutate. Two
+  operating-profile knobs soften this for a buyer who wants to attempt it anyway - queue the 2nd
+  connection instead of refusing it, or a real server-side mutation lease so a second session's calls
+  fail loud instead of silently colliding - full detail ships with the download. Otherwise: drive one
+  agent at a time.
 - **No third-party asset-generation bundling** (e.g. Meshy/Tripo) - we are a verified automation layer,
   not a content service.
 - **UE 5.4-5.8** at launch, Windows editor. macOS support is planned post-launch.
@@ -245,8 +250,9 @@ you through that client's own MCP-settings panel.
 ### What do I need to run it?
 
 Unreal Engine 5.4-5.8, Windows (Win64), the editor plugin (from Fab, Install to Engine or a
-project-relative drop both work), one MCP-spec client, and Python on your computer (your agent
-checks for this and installs it for you if it's missing, asking first). See [Install](../01-getting-started/02-install.md) and [Quickstart](../01-getting-started/03-quickstart.md) for
-the exact steps - end to end it's one Fab install plus one command.
+project-relative drop both work), one MCP-spec client, and Python 3 on your computer (required to
+run the one-command bootstrap - nothing auto-installs Python itself; if it's missing, your AI
+coding agent can spot the error and walk you through installing it, then re-run the command). See
+[Install](../01-getting-started/02-install.md) and [Quickstart](../01-getting-started/03-quickstart.md) for the exact steps - end to end it's one Fab install plus one command.
 
-*Synced from repo 2e1de2c - 2026-07-29*
+*Synced from repo 8ef1ac6 - 2026-07-31*

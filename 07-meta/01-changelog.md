@@ -5,12 +5,19 @@ version; the release process that maintains this file is in the product docs (po
 
 ## Updating an existing install
 
-Copying a new version's files over an old install requires restarting your MCP client's connection,
-same as a first install. Your client's connection is a long-running process that only loads the
-server code once - it will keep serving the OLD version's tools with no error or warning until
-restarted. Confirm you're actually running the new version by comparing the `VersionName` in the
-updated `NightwardMCP.uplugin` against `server_meta.plugin_version` reported on any tool
-response (success or error); a mismatch means the connection is stale.
+Copying a new version's files over an old install requires restarting BOTH long-running processes that
+cache the old code independently - your MCP client's Python bridge subprocess, and (if the DLL changed)
+the Unreal Editor itself. Neither notices the files changed under it and keeps serving its OLD code with
+no error or warning until it restarts.
+
+Run `doctor` after any update - its `version_drift` check compares the freshly-copied
+`NightwardMCP.uplugin` `VersionName` on disk against both `server_meta.bridge_version` (the client's
+Python subprocess, cached at its own startup - always present, even on a connection failure) and
+`server_meta.plugin_version` (the live editor - present whenever the call reached it and got a
+readable reply, absent if the call never reached it at all, e.g. a connection failure), and names
+which one is stale: an editor mismatch means restart the Unreal Editor, a bridge mismatch means fully
+quit and relaunch your MCP client. A match on one does not imply a match on the other - `doctor`
+checks both so you don't have to diff them by hand.
 
 ## v1.0 - Initial release (release date TBD - fill at Fab publish)
 
@@ -18,3 +25,6 @@ First public release. An agentic editing system for Unreal Engine 5.4-5.8 (Win64
 harness around the UE + LLM workflow - every mutation is read back from the live editor, diffed,
 compiled, and gated through Play-In-Editor before it counts as done, with a regression gate that names
 the culprit and reverts it. Works with Claude Code, Cursor, Cline, Codex, and Claude Desktop.
+
+- Fixed a shipped FAQ dev-path leak (reworded the FAQ header note).
+- Fixed `install.py` raising a raw traceback on a BOM'd `.uproject` file.

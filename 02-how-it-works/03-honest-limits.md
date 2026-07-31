@@ -74,6 +74,17 @@ compiler, one PIE slot. The only proven workaround anywhere in the ecosystem is 
 processes per agent, coordinated externally - not something any MCP server manages internally.
 Drive one agent against one editor instance at a time.
 
+This plugin's own transport is stricter than that baseline: the bridge accepts exactly ONE TCP
+client at a time, so a second agent (or a second tool - e.g. the dashboard) gets refused
+(`SERVER_BUSY`) the moment it connects, even for a read-only check-in, not only when it tries to
+mutate. Two knobs exist for exactly this case - `connection_policy` (`queue` holds one extra
+pending connection instead of refusing it) and `coordination_mode` (a real server-side mutation
+lease, so a second session's calls fail loud instead of silently colliding) - see
+`configuration.md`, "Operating profiles", and the shipped `multi-agent-coordination` skills-extra
+(ask-first install) for the check-in registry that makes running two sessions against one project
+safer to attempt. Either knob still means only one connection is ever actively serviced - there is
+still one transaction/undo stack, one compiler, one PIE slot underneath.
+
 ## Token / context cost
 
 We shape tool responses (field selection, omit-empty, compact JSON, pagination) and measured a
@@ -85,7 +96,8 @@ thousands of tokens" pattern some competitors market) is honest roadmap, not shi
 ## What else does it not do
 
 See `faq.md` "Honest limits" for the full buyer-facing list (asset import scope, source-control
-submit, synchronous-only calls, no synthetic PIE input injection, PCG/Chaos scope, engine version
-range) - kept in one place there to avoid the ledger and the FAQ drifting apart.
+submit, synchronous-only calls, no OS/HID-level raw input in PIE (`inject_input` is engine-API-level
+synthetic input, not real hardware), PCG/Chaos scope, engine version range) - kept in one place there
+to avoid the ledger and the FAQ drifting apart.
 
-*Synced from repo 2e1de2c - 2026-07-29*
+*Synced from repo 8ef1ac6 - 2026-07-31*
